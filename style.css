@@ -1,0 +1,61 @@
+form {
+  text-align: center;
+
+  margin: 15px;
+}
+input {
+  border: solid #28c153 3px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+p {
+  display: inline;
+}
+.container {
+  border: solid #4094e8be 4px;
+  border-radius: 10px;
+  margin: 50px;
+  width: auto;
+  padding: 30px;
+}
+.btn-success {
+  background-color: #28c153;
+  border: solid #28c153 3px;
+
+  position: relative;
+  top: -6px;
+  font-size: 18px;
+}
+.btn-warning {
+  position: relative;
+  left: 60em;
+  top: -62px;
+  color: white;
+}
+#main-pic {
+  border: #ab47bc solid 2px;
+  border-radius: 5px;
+  margin: 20px;
+  margin-bottom: 0px;
+  width: 270px;
+  position: relative;
+  top: -60px;
+}
+.row {
+  text-align: center;
+}
+.col-2 {
+  margin: 0 auto;
+}
+.card {
+  border: #ab47bc solid 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  width: 12rem;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Type your location ..."
+        />
+        <button type="submit" class="btn btn-success">Search</button>
+      </form>
+      <button
+        type="button"
+        class="btn btn-warning"
+        id="current-location-button"
+      >
+        Current Location
+      </button>
+
+      <div class="row">
+        <div class="col-4">
+          <img id="main-pic" src="img/rainbow.png" alt="rainbow" />
+        </div>
+        <div class="col-4">
+          <h1 id="text-city"></h1>
+          <h2>
+            <p id="current-temp"></p>
+            ° <a href="#" id="tempC">C</a> |
+            <a href="#" id="tempF">F</a>
+          </h2>
+          <!-- feels like 21°C-->
+        </div>
+        <div class="col-4">
+          <!--  England, Hampshire, United Kingdom -->
+          <h2 class="time"></h2>
+          <span id="description"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/sunrain.png"
+              class="card-img-top"
+              alt="sunrain"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mon</h5>
+              <p class="card-text">15°C 9°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/suncloud.png"
+              class="card-img-top"
+              alt="suncloud"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <p class="card-text">13°C 7°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/rain.png"
+              class="card-img-top"
+              alt="rain"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Wed</h5>
+              <p class="card-text">16°C 12°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/rain.png"
+              class="card-img-top"
+              alt="rain"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+              <p class="card-text">16°C 10°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/storm.png"
+              class="card-img-top"
+              alt="storm"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <p class="card-text">19°C 15°C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
