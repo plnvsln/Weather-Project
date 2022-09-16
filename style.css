@@ -21,7 +21,7 @@ p {
 .container {
   border: solid #4094e8be 4px;
   border-radius: 10px;
-  margin: 50px;
+  margin: 50px 50px 10px 50px;
   width: auto;
   padding: 30px;
 }
@@ -58,4 +58,8 @@ p {
   border: #ab47bc solid 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   width: 12rem;
+}
+.footer {
+  padding-top: 0;
+  text-align: center;
 }
