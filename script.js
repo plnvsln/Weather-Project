@@ -38,8 +38,10 @@ timeData.innerHTML = `${hour}:${minute} ${currentDay},<br /> ${currentDate}th of
 //api
 
 function showWeatherInfo(response) {
-  let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
+
+  document.querySelector("#current-temp-digit").innerHTML =
+    Math.round(celsiusTemp);
   document.querySelector("#text-city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -60,7 +62,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 document.querySelector(`#search-form`).addEventListener("submit", handleSubmit);
-searchCity("Paris");
 
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -70,3 +71,31 @@ function getCurrentLocation(event) {
 document
   .querySelector("#current-location-button")
   .addEventListener("click", getCurrentLocation);
+
+//temperature
+
+function showCelsius(event) {
+  event.preventDefault();
+  tempC.classList.add("active");
+  tempF.classList.remove("active");
+  document.querySelector("#current-temp-digit").innerHTML =
+    Math.round(celsiusTemp);
+}
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  tempC.classList.remove("active");
+  tempF.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let currentTemp = document.querySelector("#current-temp-digit");
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemp = null;
+
+let tempC = document.querySelector("#tempC-link");
+let tempF = document.querySelector("#tempF-link");
+tempC.addEventListener("click", showCelsius);
+tempF.addEventListener("click", showFahrenheit);
+
+searchCity("Paris");

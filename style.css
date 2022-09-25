@@ -1,6 +1,5 @@
 form {
   text-align: center;
-
   margin: 15px;
 }
 input {
@@ -15,12 +14,21 @@ input:hover {
 a {
   text-decoration: none;
 }
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  color: black;
+}
+
 p {
   display: inline;
 }
 .container {
   border: solid #4094e8be 4px;
   border-radius: 10px;
+  background-color: aliceblue;
   margin: 50px 50px 10px 50px;
   width: auto;
   padding: 30px;
@@ -28,7 +36,6 @@ p {
 .btn-success {
   background-color: #28c153;
   border: solid #28c153 3px;
-
   position: relative;
   top: -6px;
   font-size: 18px;
