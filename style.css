@@ -47,6 +47,7 @@ p {
   color: white;
 }
 #main-pic {
+  background-color: white;
   border: #ab47bc solid 2px;
   border-radius: 5px;
   margin: 20px;
