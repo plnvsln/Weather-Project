@@ -38,13 +38,27 @@ timeData.innerHTML = `${hour}:${minute} ${currentDay},<br /> ${currentDate}th of
 //api
 
 function showWeatherInfo(response) {
+  console.log(response.data);
   celsiusTemp = response.data.main.temp;
 
   document.querySelector("#current-temp-digit").innerHTML =
     Math.round(celsiusTemp);
   document.querySelector("#text-city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document
+    .querySelector("#main-pic")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#main-pic")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 function searchCity(city) {
   let apiKey = `c95d60a1e3adbeb286133f1ebebc2579`;
@@ -99,3 +113,4 @@ tempC.addEventListener("click", showCelsius);
 tempF.addEventListener("click", showFahrenheit);
 
 searchCity("Paris");
+console.log(response.data);

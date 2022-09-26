@@ -28,7 +28,7 @@ p {
 .container {
   border: solid #4094e8be 4px;
   border-radius: 10px;
-  background-color: aliceblue;
+  background-color: rgb(247, 236, 248);
   margin: 50px 50px 10px 50px;
   width: auto;
   padding: 30px;
@@ -51,9 +51,15 @@ p {
   border-radius: 5px;
   margin: 20px;
   margin-bottom: 0px;
-  width: 270px;
+  width: 150px;
   position: relative;
   top: -60px;
+}
+.time {
+  font-size: 24px;
+}
+#description {
+  text-transform: capitalize;
 }
 .row {
   text-align: center;
