@@ -73,6 +73,9 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   width: 12rem;
 }
+#temp-max {
+  opacity: 0.5;
+}
 .footer {
   padding-top: 0;
   text-align: center;

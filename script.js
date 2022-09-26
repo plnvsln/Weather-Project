@@ -35,6 +35,36 @@ let timeData = document.querySelector(".time");
 
 timeData.innerHTML = `${hour}:${minute} ${currentDay},<br /> ${currentDate}th of ${currenMonth}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 4">
+          <div class="card">
+            <img
+              src="img/sunrain.png"
+              class="card-img-top"
+              alt="sunrain"
+              style="width: 100px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">${day}</h5>
+              <p class="card-text">
+                <span id="temp-min">15</span>°C 
+                <span id="temp-max">9</span>°C
+              </p>
+            </div>
+          </div>
+        </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //api
 
 function showWeatherInfo(response) {
@@ -113,4 +143,4 @@ tempC.addEventListener("click", showCelsius);
 tempF.addEventListener("click", showFahrenheit);
 
 searchCity("Paris");
-console.log(response.data);
+displayForecast();
