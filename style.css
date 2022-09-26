@@ -26,9 +26,18 @@ p {
   display: inline;
 }
 .container {
-  border: solid #4094e8be 4px;
+  background: linear-gradient(
+    90.9deg,
+    rgba(255, 187, 187, 0.465) -8.8%,
+    rgba(255, 220, 177, 0.465) 12.4%,
+    rgba(255, 249, 177, 0.465) 35.6%,
+    rgba(220, 255, 177, 0.465) 59.6%,
+    rgba(177, 218, 255, 0.465) 84%,
+    rgba(222, 177, 255, 0.465) 107.9%
+  );
+
+  border: solid rgb(87, 158, 215) 4px;
   border-radius: 10px;
-  background-color: rgb(247, 236, 248);
   margin: 50px 50px 10px 50px;
   width: auto;
   padding: 30px;
@@ -41,14 +50,14 @@ p {
   font-size: 18px;
 }
 .btn-warning {
+  color: rgb(52, 51, 51);
   position: relative;
   left: 60em;
   top: -62px;
-  color: white;
 }
 #main-pic {
-  background-color: white;
-  border: #ab47bc solid 2px;
+  background-color: #fdffcd;
+  border: rgb(25, 109, 178) solid 2px;
   border-radius: 5px;
   margin: 20px;
   margin-bottom: 0px;
@@ -69,11 +78,13 @@ p {
   margin: 0 auto;
 }
 .card {
-  border: #ab47bc solid 2px;
+  background-color: #fdffcd;
+  border: rgb(176, 99, 209) solid 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   width: 12rem;
 }
-#temp-max {
+
+#temp-min {
   opacity: 0.5;
 }
 .footer {
